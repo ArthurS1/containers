@@ -1,0 +1,4 @@
+FROM registry.fedoraproject.org/fedora-toolbox:35
+
+RUN dnf upgrade -y
+RUN dnf install neovim -y
