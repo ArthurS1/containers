@@ -1,4 +1,8 @@
 FROM registry.fedoraproject.org/fedora-toolbox:35
 
+WORKDIR /home
+
+COPY . .
+
 RUN dnf upgrade -y
-RUN dnf install neovim -y
+RUN dnf install $(< ./assets/packages) -y
